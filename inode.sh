@@ -1,6 +1,6 @@
 #!/bin/bash
 # ******************************************
-# Script : IceCast2 + eZStream Auto Installer
+# Script : Ogar-Unlimited-Autoinstaller.
 # Author : RAW A.K.A Jasht'sSerie
 # ******************************************
 
