@@ -23,11 +23,13 @@ echo -n "Get Node..."; npm install -g n  > /dev/null; echo "Done.";
 echo -n "Install Node..."; n 5.9.0  > /dev/null; echo "Done.";
 echo -n "Creating A Symlink..."; sudo ln -sf /usr/local/n/versions/node/5.9.0/bin/node /usr/bin/node > /dev/null; echo "Done.";
 sleep 5
+echo "~/////////////////////////~"
 echo "***************************"
 echo "Node V `node -v`"
 echo "Npm V `npm -v`"
 echo "We Need To Play Ogar xD"
 echo "**************************"
+echo "~////////////////////////~"
 sleep 2
 echo "~~~~~~~~~~~~~~~~~~~~~~~~~~"
 read -p "Do You Want To Start With Ogar-Unlimited Installation? <y/N> " prompt
