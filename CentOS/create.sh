@@ -5,13 +5,6 @@
 # ******************************************
 
 #Start.
-#!/bin/bash
-# ******************************************
-# Script : Ogar-Unlimited-Autoinstaller.
-# Author : RAW A.K.A Jasht'sSerie
-# ******************************************
-
-#Start.
 if [ "$1" ] || [ "$2" ] || [ "$3" ]
 then 
 echo -n "Updating System..."; yum -y update > /dev/null; echo "Done.";
