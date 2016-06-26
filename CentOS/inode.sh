@@ -34,6 +34,6 @@ echo "**************************"
 echo "~////////////////////////~"
 sleep 2
 echo "~~~~~~~~~~~~~~~~~~~~~~~~~~"
-echo "Now you can start with ogar-unlimited installation with command ./create.sh gamef 81 82"
+echo "Now you can start with ogar-unlimited installation with command ./create.sh gamefolder 81 82"
 echo "~~~~~~~~~~~-.-~~~~~~~~~~~~"
 sleep 1
