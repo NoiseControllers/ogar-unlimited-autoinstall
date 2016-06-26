@@ -8,7 +8,7 @@ Distro : Debian 7.9
    
    $ **`apt-get install git -y`**
    
-   $ **`git clone `**
+   $ **`git clone https://github.com/NoiseControllers/ogar-unlimited-autoinstall.git`**
    
 2. Install NodeJS & Ogar-unlimited.
 
