@@ -9,7 +9,7 @@ Distro : Ubuntu 14.04 LTS
    
    $ **`apt-get install git -y`**
    
-   $ **`git clone `**
+   $ **`git clone https://github.com/NoiseControllers/ogar-unlimited-autoinstall.git`**
    
 2. Install NodeJS & Ogar-unlimited.
 
