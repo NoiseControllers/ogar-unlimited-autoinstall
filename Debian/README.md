@@ -14,7 +14,7 @@ Distro : Debian 7.9
 
    $ **`cd ~/`**
 
-   $ **`cd Ogar-unlimited-autoinstall/`**
+   $ **`cd Ogar-unlimited-autoinstall/Debian/`**
    
    $ **`chmod +x *`**
    
