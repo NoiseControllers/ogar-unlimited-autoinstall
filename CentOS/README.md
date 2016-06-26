@@ -7,7 +7,7 @@ Distro : CentOS 7. I Think This Will Work Even If Is CentOS 6.x If Will Be An Pr
    
    $ **`yum -y install git`**
    
-   $ **`git clone`**
+   $ **`git clone https://github.com/NoiseControllers/ogar-unlimited-autoinstall.git`**
    
    $ **`cd ~/ogar-unlimited-autoinstall/CentOS/`**
    
