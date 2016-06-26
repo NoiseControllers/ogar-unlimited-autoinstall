@@ -7,7 +7,7 @@
 #Start.
 echo -n "Updating System..."; yum -y update > /dev/null; echo "Done.";
 echo -n "Upgrading System..."; yum -y upgrade > /dev/null; echo "Done.";
-echo -n "Installing Packs..."; yum -y install git libssl-dev openssl nano wget curl > /dev/null; echo "Done.";
+echo -n "Installing Packs..."; yum -y install git libssl-dev openssl nano bind-utils wget curl > /dev/null; echo "Done.";
 echo -n "Installing Packs..."; yum -y install build-essential > /dev/null; echo "Done.";
 cd ~/
 echo -n "Downloading Node..."; wget http://nodejs.org/dist/v0.10.30/node-v0.10.30-linux-x64.tar.gz > /dev/null; echo "Done.";
