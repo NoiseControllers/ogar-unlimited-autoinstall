@@ -7,8 +7,7 @@
 #Start.
 echo -n "Updating System..."; apt-get update -y  > /dev/null; echo "Done.";
 echo -n "Upgrading System..."; apt-get upgrade -y  > /dev/null; echo "Done.";
-echo -n "Installing Packs..."; apt-get install git libssl-dev openssl nano wget curl -y > /dev/null; echo "Done.";
-echo -n "Installing Packs..."; apt-get install build-essential -y  > /dev/null; echo "Done.";
+echo -n "Installing Packs..."; apt-get install git libssl-dev openssl nano wget curl build-essential dnsutils -y > /dev/null; echo "Done.";
 echo -n "Getting Node Source..."; curl -sL https://deb.nodesource.com/setup | sudo bash -  > /dev/null; echo "Done.";
 echo -n "Installing Node..."; apt-get install nodejs -y > /dev/null; echo "Done.";
 sleep 2
