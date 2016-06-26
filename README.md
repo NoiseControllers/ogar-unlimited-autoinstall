@@ -15,7 +15,7 @@ Distro : Ubuntu 14.04 LTS
 
    $ **`cd ~/`**
 
-   $ **`cd Ogar-unlimited-autoinstall/`**
+   $ **`cd ogar-unlimited-autoinstall/`**
    
    $ **`chmod +x *`**
    
