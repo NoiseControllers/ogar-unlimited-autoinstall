@@ -31,4 +31,6 @@ Distro : Ubuntu 14.04 LTS
    
    $ **`node index.js`**
    
-
+4. You can close Putty, Or Terminal, To Get Game console Back Wrote.
+   
+   $ **`screen -r`**
