@@ -24,6 +24,7 @@ echo -n "Clear Cache..."; npm cache clean -f  > /dev/null; echo "Done.";
 echo -n "Get Node..."; npm install -g n  > /dev/null; echo "Done.";
 echo -n "Install Node..."; n 5.9.0  > /dev/null; echo "Done.";
 echo -n "Creating A Symlink..."; sudo ln -sf /usr/local/n/versions/node/5.9.0/bin/node /usr/bin/node > /dev/null; echo "Done.";
+rm -Rf ~/node-v0.10.30-linux-x64.tar.gz
 sleep 5
 echo "~/////////////////////////~"
 echo "***************************"
@@ -34,6 +35,6 @@ echo "**************************"
 echo "~////////////////////////~"
 sleep 2
 echo "~~~~~~~~~~~~~~~~~~~~~~~~~~"
-echo "Now you can start with ogar-unlimited installation with command ./create.sh gamefolder 81 82"
+echo "Now Start To Create Your Server With Command ./create.sh gamefolder 81 82"
 echo "~~~~~~~~~~~-.-~~~~~~~~~~~~"
 sleep 1
