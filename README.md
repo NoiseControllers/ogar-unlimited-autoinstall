@@ -21,7 +21,7 @@ Distro : Ubuntu 14.04 LTS
    
    $ **`./inode.sh`**
    
-   $ **`./create.sh gamefolder 81 82`**
+   $ **`./create.sh gamefolder 89 98`**
    
 3. Start Server
    
