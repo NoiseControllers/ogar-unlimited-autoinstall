@@ -32,13 +32,7 @@ echo "**************************"
 echo "~////////////////////////~"
 sleep 2
 echo "~~~~~~~~~~~~~~~~~~~~~~~~~~"
-read -p "Do You Want To Start With Ogar-Unlimited Installation? <y/N> " prompt
-if [[ $prompt == "y" || $prompt == "Y" || $prompt == "yes" || $prompt == "Yes" ]]
-then
-  ./create.sh
-else
-  exit 0
-fi
+echo "To Start With Ogar Installation Execute ./create.sh gamefolder 449 89"
 echo "~~~~~~~~~~~-.-~~~~~~~~~~~~"
 sleep 1
 
