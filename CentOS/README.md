@@ -4,6 +4,8 @@ Distro : CentOS 7. I Think This Will Work Even If Is CentOS 6.x If Will Be An Pr
 1. Copy Repo.
    
    $ **`cd ~/`**
+
+   $ **`yum -y update`**
    
    $ **`yum -y install git`**
    
