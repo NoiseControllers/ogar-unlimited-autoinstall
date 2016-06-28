@@ -35,6 +35,17 @@ Distro : Ubuntu 14.04 LTS
    
    $ **`screen -r`**
 
+5. Want to host client in your server ? First Install Apache2 Then Create One Virtualhost.
+
+    $ **`sh ap.sh`** 
+    
+    $ **`sh client.sh mydomain.com`**
+    
+    $ Or **`sh client.sh my.subdomain.net`**
+    
+    ap.sh Will Install Apache And Php Modules, Don't Run It Anymore Just One Time. After This To Host More Domains
+    In Your Server Just Run **`sh client.sh domainname.al/com/net/tk/ml/`** Or Whatever.
+
 ![](http://image.prntscr.com/image/ee485c4f68b44c4b832f5875ebbe7bf4.png)
 
 ~
