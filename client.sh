@@ -44,11 +44,19 @@ unzip Agarioclient.zip
 mv Agarioclient/* ./
 rm -Rf Agarioclient.zip
 rm -Rf Agarioclient
+chown -R www-data:www-date *
 
 #Enable & Reload.
 sudo a2ensite $1.conf
 service apache2 restart
 
 # Work Done.
-echo "Domain creation of $1 is complete." 
-echo "You can place your files in $vhostdir/$1/public_html" 
+echo "~////////////////////////////////////////////////////////~"
+echo "~////////////////////////////////////////////////////////~"
+echo "~--------------------------------------------------------~"
+echo "Domain creation of $1 is complete."
+echo "You can Visit $1 To Check If Is All Working Good."
+echo "You can place/edit your files in $vhostdir/$1/public_html"
+echo "~--------------------------------------------------------~"
+echo "~////////////////////////////////////////////////////////~"
+echo "~////////////////////////////////////////////////////////~"
