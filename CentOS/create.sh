@@ -38,8 +38,8 @@ cat <<EOF > /home/$1/Ogar-unlimited/src/settings/advConfig.ini
 // playerSafeSpawn: Makes sure players dont spawn near, inside, or on top of one another 
 // vps : If 1, the port will change to process.env.PORT instead of serverPort/serverStatsPort. (enable this if you have VPS)
 // fps : Amount of frames per second. (Note: This will affect the ticks of the server)
-serverPort = $2
-serverStatsPort = $3
+serverPort = $1
+serverStatsPort = $2
 serverStatsUpdate = 60
 serverViewBaseX = 1024
 serverViewBaseY = 592
@@ -264,7 +264,7 @@ module.exports = class ConfigService {
       playerSafeSpawn: 1, // Makes sure players dont spawn near, inside, or on top of one another
       serverMaxConnectionsPerIp: 5, // Maximum amount of IPs per player connection
       serverMaxConnections: 64, // Maximum amount of connections to the server.
-      serverPort: $2, // Server port
+      serverPort: $1, // Server port
       botrespawn: 1,
       rainbow: 1,
       fps: 20,
@@ -288,7 +288,7 @@ module.exports = class ConfigService {
       serverBots: 0, // Amount of player bots to spawn
       serverViewBaseX: 1024, // Base view distance of players. Warning: high values may cause lag
       serverViewBaseY: 592, // Same thing as line 77
-      serverStatsPort: $3, // Port for stats server. Having a negative number will disable the stats server.
+      serverStatsPort: $2, // Port for stats server. Having a negative number will disable the stats server.
       serverStatsUpdate: 60, // Amount of seconds per update for the server stats
       serverLogLevel: 1, // Logging level of the server. 0 = No logs, 1 = Logs the console, 2 = Logs console and ip connections
       serverScrambleCoords: 0, // Toggles scrambling of coordinates. 0 = No scrambling, 1 = scrambling. Default is 1.
