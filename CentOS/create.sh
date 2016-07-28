@@ -354,6 +354,7 @@ module.exports = class ConfigService {
       tourneyAutoFill: 0, // If set to a value higher than 0, the tournament match will automatically fill up with bots after this amount of seconds
       tourneyAutoFillPlayers: 1, // The timer for filling the server with bots will not count down unless there is this amount of real players
       playerBotGrowEnabled: 1, // If 0, eating a cell with less than 17 mass while cell has over 625 wont gain any mass
+      playerOldColors: 0, // If 1, cells use the original ogar colors
     }; // end of this.config
     this.banned = [];
     this.opByIp = [];
