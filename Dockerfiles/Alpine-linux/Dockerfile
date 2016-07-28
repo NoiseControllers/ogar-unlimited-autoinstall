@@ -32,6 +32,6 @@ RUN apk --update add openssh \
 COPY . /tmp/
 RUN sh /tmp/sshd.sh
 
-EXPOSE 22 443 88
+EXPOSE 22 443 88 1000
 
 CMD  ["/usr/sbin/sshd", "-D"]
