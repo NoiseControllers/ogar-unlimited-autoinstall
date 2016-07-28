@@ -1,0 +1,23 @@
+::::::::::: ::::    ::: :::::::::: ::::::::::: ::::    ::: ::::::::::: ::::::::::: :::   ::: 
+    :+:     :+:+:   :+: :+:            :+:     :+:+:   :+:     :+:         :+:     :+:   :+: 
+    +:+     :+:+:+  +:+ +:+            +:+     :+:+:+  +:+     +:+         +:+      +:+ +:+  
+    +#+     +#+ +:+ +#+ :#::+::#       +#+     +#+ +:+ +#+     +#+         +#+       +#++:   
+    +#+     +#+  +#+#+# +#+            +#+     +#+  +#+#+#     +#+         +#+        +#+    
+    #+#     #+#   #+#+# #+#            #+#     #+#   #+#+#     #+#         #+#        #+#    
+########### ###    #### ###        ########### ###    #### ###########     ###        ###    
+
+To Install An Pack On Alpine Linux You Can Use: 
+apk add --no-cache nano
+or 
+apk add --no-cache git
+etc.
+. 
+NodeJS is installed, The latest version. 6.X.
+Which as i have test OgarUL is working perfectly with it. 
+Git also is installed. All what you need to do is, 
+cd /home
+mkdir game && cd game
+git clone https://github.com/AJS-development/Ogar-unlimited.git
+cd Ogar-unlimited/src
+npm install
+node index.js
