@@ -21,6 +21,7 @@ echo -n "Clear Cache..."; npm cache clean -f  > /dev/null; echo "Done.";
 echo -n "Get Node..."; npm install -g n  > /dev/null; echo "Done.";
 echo -n "Install Node..."; n 5.9.0  > /dev/null; echo "Done.";
 echo -n "Creating A Symlink..."; sudo ln -sf /usr/local/n/versions/node/5.9.0/bin/node /usr/bin/node > /dev/null; echo "Done.";
+echo -n "Fixing Node Prefix..."; npm config set prefix /usr/local > /dev/null; echo "Done.";
 sleep 5
 echo "~/////////////////////////~"
 echo "***************************"
