@@ -16,3 +16,8 @@ $ **`docker images`**
 $ **`docker run -d -P [Image ID]`**
 
 If you provider is supporting Droplets, then search for https://hub.docker.com/r/theraw/ogar/ tag :latest
+
+#Build Tests? Ofcourse.
+![](http://image.prntscr.com/image/d97d9dcd4942480488ed4708bb880124.png)
+
+![](http://image.prntscr.com/image/544ee0ef07f7421aa45d5feabc22b335.png)
