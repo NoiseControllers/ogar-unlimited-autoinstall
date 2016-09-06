@@ -1,35 +1,42 @@
 FROM docker:1.12.0
 
 ENV LANG=C.UTF-8
+
 RUN apk upgrade --update && \
-apk add --update libstdc++ curl ca-certificates bash openssh sudo unzip
+    apk add --update libstdc++ curl ca-certificates bash openssh sudo unzip
 
 RUN apk add --no-cache \
-openssl \
-nodejs \
-wget \
-nano \
-git
+    openssl \
+    nodejs \
+    wget \
+    nano \
+    git \
+    openssh
 RUN apk update \
-&& apk add \
-busybox-suid \
-tar \
-wget \
-&& apk upgrade \
-openssl \
-&& rm -rf /var/cache/apk/*
+ && apk add \
+    bash \
+    busybox-suid \
+    curl \
+    openssh \
+    tar \
+    wget \
+ && apk upgrade \
+    openssl \
+ && rm -rf /var/cache/apk/*
 
 
 RUN chmod 700 /root
 
 RUN apk --update add openssh \
-&& sed -i s/#PermitRootLogin.*/PermitRootLogin\ yes/ /etc/ssh/sshd_config \
-&& echo "root:infinity" | chpasswd \
-&& rm -rf /var/cache/apk/*
+  && sed -i s/#PermitRootLogin.*/PermitRootLogin\ yes/ /etc/ssh/sshd_config \
+  && echo "root:infinity" | chpasswd \
+  && rm -rf /var/cache/apk/*
 
 EXPOSE 22 443 88 1000
-RUN curl api.ipify.org
 CMD sudo /usr/bin/ssh-keygen -A && \
-sudo /usr/sbin/sshd -D && \
-sudo su - && \
-tail -f /dev/null
+    sudo /usr/sbin/sshd -D && \
+    sudo su - && \
+    tail -f /dev/null
+    
+
+RUN echo "---------------------------------- IP : `curl api.ipify.org`"
