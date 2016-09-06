@@ -3,7 +3,11 @@ FROM docker:1.12.0
 ENV LANG=C.UTF-8
 
 RUN apk upgrade --update && \
-    apk add --update libstdc++ curl ca-certificates bash openssh sudo unzip
+    apk add --update libstdc++ curl ca-certificates bash openssh sudo unzip tzdata
+
+RUN apk update && apk upgrade && apk --update add \
+    ruby ruby-irb ruby-rake ruby-io-console ruby-bigdecimal ruby-json ruby-bundler \
+    &&  echo 'gem: --no-document' > /etc/gemrc
 
 RUN apk add --no-cache \
     openssl \
