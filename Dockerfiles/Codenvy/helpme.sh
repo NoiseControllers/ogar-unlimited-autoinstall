@@ -1,24 +1,23 @@
+#!/bin/bash
+ln -sf /usr/bin/node /usr/local/bin/node
+ln -sf /usr/bin/npm /usr/local/bin/npm
 mkdir /opt
-sudo apt-get install ruby -y
 cd /opt
-sudo wget https://github.com/busyloop/lolcat/archive/master.zip
-sudo unzip master.zip
-sudo rm -Rf master.zip
+wget https://github.com/busyloop/lolcat/archive/master.zip
+unzip master.zip
+rm -Rf master.zip
 cd lolcat-master/
-sudo gem install lolcat
-sudo npm cache clean -f | lolcat -a -s 100
-sudo npm install -g n | lolcat -a -s 100
-sudo n 5.9.0 | lolcat -a -s 100
-sudo ln -sf /usr/local/n/versions/node/5.9.0/bin/node /usr/bin/node | lolcat -a -s 100
-sudo npm config set prefix /usr/local | lolcat -a -s 100
+gem install lolcat
 clear
-sleep 0.3
+sleep 0.1
 cd ~/
-sudo mkdir ~/ogar/
+mkdir ~/ogar/
 cd ~/ogar/
-sudo git clone https://github.com/AJS-development/Ogar-unlimited.git
-cd Ogar-unlimited/src/
+git clone https://github.com/AJS-development/Ogar-unlimited.git
 clear
-sleep 0.3
+sleep 0.5
+cd ~/ogar/Ogar-unlimited/src
 npm install | lolcat -a -s 100
-
+sleep 5
+clear
+echo "Ogar Dir = ~/ogar/Ogar-unlimited" | lolcat -a -s 100
