@@ -1,46 +1,43 @@
-FROM docker:1.12.0
+FROM alpine:3.4
 
 ENV LANG=C.UTF-8
 
 RUN apk upgrade --update && \
-    apk add --update libstdc++ curl ca-certificates bash openssh sudo unzip tzdata
+apk add --update libstdc++ curl ca-certificates bash openssh sudo unzip tzdata
 
 RUN apk update && apk upgrade && apk --update add \
-    ruby ruby-irb ruby-rake ruby-io-console ruby-bigdecimal ruby-json ruby-bundler \
-    &&  echo 'gem: --no-document' > /etc/gemrc
+ruby ruby-irb ruby-rake ruby-io-console ruby-bigdecimal ruby-json ruby-bundler \
+&&  echo 'gem: --no-document' > /etc/gemrc
 
 RUN apk add --no-cache \
-    openssl \
-    nodejs \
-    wget \
-    nano \
-    git \
-    openssh
+openssl \
+nodejs \
+wget \
+nano \
+git \
+openssh
 RUN apk update \
- && apk add \
-    bash \
-    busybox-suid \
-    curl \
-    openssh \
-    tar \
-    wget \
- && apk upgrade \
-    openssl \
- && rm -rf /var/cache/apk/*
-
-
-RUN chmod 700 /root
+&& apk add \
+bash \
+busybox-suid \
+curl \
+openssh \
+tar \
+wget \
+&& apk upgrade \
+openssl \
+&& rm -rf /var/cache/apk/*
 
 RUN apk --update add openssh \
-  && sed -i s/#PermitRootLogin.*/PermitRootLogin\ yes/ /etc/ssh/sshd_config \
-  && echo "root:infinity" | chpasswd \
-  && rm -rf /var/cache/apk/*
+&& sed -i s/#PermitRootLogin.*/PermitRootLogin\ yes/ /etc/ssh/sshd_config \
+&& echo "root:infinity" | chpasswd \
+&& rm -rf /var/cache/apk/*
 
 EXPOSE 22 443 88 1000
-CMD sudo /usr/bin/ssh-keygen -A && \
-    sudo /usr/sbin/sshd -D && \
-    sudo su - && \
-    tail -f /dev/null
-    
+RUN sudo /usr/bin/ssh-keygen -A
+CMD sudo /usr/sbin/sshd -D && \
+sudo su - && \
+sleep 365d
+
 
 RUN echo "---------------------------------- IP : `curl api.ipify.org`"
