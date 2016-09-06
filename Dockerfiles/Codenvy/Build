@@ -1,25 +1,35 @@
-#
-# Copyright (c) 2012-2015 Codenvy, S.A.
-# All rights reserved. This program and the accompanying materials
-# are made available under the terms of the Eclipse Public License v1.0
-# which accompanies this distribution, and is available at
-# http://www.eclipse.org/legal/epl-v10.html
-#
-# Contributors:
-#   Codenvy, S.A. - initial API and implementation
-#
+FROM docker:1.12.0
 
-FROM codenvy/javascript_html
-ENV CODENVY_APP_BIND_DIR /var/www/html
+ENV LANG=C.UTF-8
+RUN apk upgrade --update && \
+apk add --update libstdc++ curl ca-certificates bash openssh sudo unzip
 
-RUN sudo apt-get update && sudo apt-get upgrade -y
-RUN sudo apt-get install git libssl-dev openssl nano wget curl build-essential dnsutils -y
-RUN curl -sL https://deb.nodesource.com/setup_4.x | sudo bash -
-RUN sudo apt-get install nodejs -y
-RUN sudo apt-get install aptitude -y
-RUN sudo aptitude -y install ssh
-RUN sudo aptitude -y install openssh-client
+RUN apk add --no-cache \
+openssl \
+nodejs \
+wget \
+nano \
+git
+RUN apk update \
+&& apk add \
+busybox-suid \
+tar \
+wget \
+&& apk upgrade \
+openssl \
+&& rm -rf /var/cache/apk/*
 
 
-EXPOSE 22 88 443 1000
-VOLUME ["/var/www/html"]
+RUN chmod 700 /root
+
+RUN apk --update add openssh \
+&& sed -i s/#PermitRootLogin.*/PermitRootLogin\ yes/ /etc/ssh/sshd_config \
+&& echo "root:infinity" | chpasswd \
+&& rm -rf /var/cache/apk/*
+
+EXPOSE 22 443 88 1000
+RUN curl api.ipify.org
+CMD sudo /usr/bin/ssh-keygen -A && \
+sudo /usr/sbin/sshd -D && \
+sudo su - && \
+tail -f /dev/null
