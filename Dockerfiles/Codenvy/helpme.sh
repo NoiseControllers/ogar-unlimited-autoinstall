@@ -1,4 +1,4 @@
-#!/bin/bash
+mkdir /opt
 sudo apt-get install ruby -y
 cd /opt
 sudo wget https://github.com/busyloop/lolcat/archive/master.zip
